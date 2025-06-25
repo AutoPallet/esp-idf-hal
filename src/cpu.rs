@@ -12,7 +12,7 @@ pub const CORES: u32 = SOC_CPU_CORES_NUM;
 #[repr(C)]
 pub enum Core {
     Core0 = 0, // PRO on dual-core systems, the one and only CPU on single-core systems
-    #[cfg(any(esp32, esp32s3))]
+    #[cfg(any(esp32, esp32s3, esp32p4))]
     Core1 = 1, // APP on dual-core systems
 }
 
